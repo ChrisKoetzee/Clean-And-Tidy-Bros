@@ -1,0 +1,63 @@
+.navB {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* You can adjust the z-index as needed */
+  background-color: #61dafb;
+
+}
+
+.navB .nav-link {
+  color: blue; 
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  border-radius: 50%;
+  border: 10px solid #61dafb;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-image: url('https://media.istockphoto.com/id/1279811110/photo/chemical-sofa-depth-cleaning-by-a-professional.webp?b=1&s=170667a&w=0&k=20&c=jkVjBbeIeHrbCxHNKUjLPq6Rq7WCgwbtzE5Mp-XOD6U=');
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.6); /* White color with 60% opacity */
+  background-blend-mode: overlay;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(8, 8, 118);
+}
+
+.App-link {
+  color: blue;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.text-left-align {
+  text-align: left;
+}
+
