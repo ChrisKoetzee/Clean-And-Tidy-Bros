@@ -1,27 +1,25 @@
 import { Route, Routes } from "react-router-dom";
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Home from './pages/Home';
 import About from './pages/About';
 import Gallery from './pages/Gallery';
 import Services from './pages/Services';
 import GetAQuote from './pages/GetAQuote';
 import Testimonials from './pages/Testimonials';
-import {Container} from 'react-bootstrap';
 
 function App() {
   return (
       <div className="App">
-        <Container>
           <Routes>
-            <Route path="/Home" element={<Home/>}/>
-            <Route path="/About" element={<About/>}/>
-            <Route path="/Gallery" element={<Gallery/>}/>
-            <Route path="/Services" element={<Services/>}/>
-            <Route path="/GetAQuote" element={<GetAQuote/>}/>
-            <Route path="/Testimonials" element={<Testimonials/>}/>
+            <Route path="/" element={<Home />}/>
+            <Route path="/about" element={<About />}/>
+            <Route path="/gallery" element={<Gallery />}/>
+            <Route path="/services" element={<Services />}/>
+            <Route path="/getAQuote" element={<GetAQuote />}/>
+            <Route path="/testimonials" element={<Testimonials />}/>
           </Routes>
-          <Home/>
-        </Container>
       </div>
   );
 }
