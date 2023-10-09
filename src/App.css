@@ -61,3 +61,24 @@
   text-align: left;
 }
 
+.small-text {
+  font-size: 1rem;
+  text-decoration-thickness: 3rem;
+}
+
+.hover-card {
+  opacity: 0.5; 
+  background-color: #f5f9fa; 
+  box-shadow: none; 
+  transform: translateY(0); 
+  transition: opacity 0.3s, background-color 0.3s, box-shadow 0.3s, transform 0.3s; 
+}
+
+.hover-card:hover {
+  opacity: 0.5;
+  background-color: #21bff9; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transform: translateY(-5px);
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
