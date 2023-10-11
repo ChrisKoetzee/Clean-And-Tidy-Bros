@@ -7,6 +7,7 @@ import {
   MDBRow, 
   MDBCol,
 } from 'mdb-react-ui-kit';
+import ModalContact from './ModalContact';
 
 export default function App() {
   return (
@@ -32,7 +33,7 @@ export default function App() {
                             floating 
                             className='m-1 d-flex justify-content-center align-items-center'
                             style={{ backgroundColor: '#55acee' }}
-                            href='https://twitter.com/douglasroadps'
+                            href='https://twitter.com/bros_tidy'
                             role='button'
                         >
                             <MDBIcon fab icon='twitter' />
@@ -57,7 +58,9 @@ export default function App() {
                             <MDBIcon icon="phone" className="me-3" />
                             Contact Eathan on +27749634583 or Contact Kariem on +27742170023
                         </p>
-                        <MDBBtn className="ms-auto px-3" >Contact Us</MDBBtn>
+                        <MDBBtn className="ms-auto px-3" >
+                            <ModalContact/>
+                        </MDBBtn>
                     </MDBCol>
                 </MDBRow>
             </div>  
