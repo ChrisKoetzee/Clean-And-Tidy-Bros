@@ -1,12 +1,13 @@
 import React from 'react';
-import { Button, Nav, Navbar } from "react-bootstrap";
+import { Nav, Navbar } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import '../App.css';
+import ModalContact from './ModalContact';
 
 
 const NavBar = () => {
     return (
-        <Navbar expand="lg" className="fixed-top navB mb-5"> 
+        <Navbar expand="lg" className="fixed-top navB mb-5 container-fluid"> 
             <Navbar.Brand as={Link} to="/" className="ms-auto px-3">Clean and Tidy Bros</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav">
@@ -19,7 +20,7 @@ const NavBar = () => {
                     <Nav.Link as={Link} to="/testimonials">Testimonials</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
-            <Button className="ms-auto px-3" >Contact Us</Button>
+            <ModalContact />
         </Navbar>
     )
 };

@@ -8,18 +8,18 @@ const About = () => {
             <Template>
                 <header className="App-header mt-5">
                     <Container fluid="md" className="mt-5">
-                        <Row>
-                            <Col>
+                        <Row className="display-flex justify-content-center">
+                            <Col xs={12} sm={12}>
                                 <h1 >About Us</h1>
                                 <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
                                 </p>
                             </Col>
                         </Row>
-                        <Row>
-                            <Col>
+                        <Row >
+                            <Col xs={12} sm={6}>
                                 <img src="https://digitalcollections.lib.uct.ac.za/islandora/object/islandora%3A18114/datastream/MEDIUM_SIZE/view" height="80%" width="100%" alt="flats in Elsies River"/>
                             </Col>
-                            <Col>
+                            <Col xs={12} sm={6}>
                                 <img src="https://digitalcollections.lib.uct.ac.za/islandora/object/islandora%3A18113/datastream/MEDIUM_SIZE/view" height="80%" width="100%" alt="Elsies Main road 1977"/>
                             </Col>
                         </Row>             

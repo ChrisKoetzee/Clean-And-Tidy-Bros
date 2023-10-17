@@ -21,13 +21,14 @@
   pointer-events: none;
   border-radius: 50%;
   border: 10px solid #61dafb;
+  transition: transform 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
   background-image: url('https://media.istockphoto.com/id/1279811110/photo/chemical-sofa-depth-cleaning-by-a-professional.webp?b=1&s=170667a&w=0&k=20&c=jkVjBbeIeHrbCxHNKUjLPq6Rq7WCgwbtzE5Mp-XOD6U=');
@@ -71,7 +72,7 @@
   background-color: #f5f9fa; 
   box-shadow: none; 
   transform: translateY(0); 
-  transition: opacity 0.3s, background-color 0.3s, box-shadow 0.3s, transform 0.3s; 
+  transition-property: opacity 0.3s, background-color 0.3s, box-shadow 0.3s, transform 0.3s; 
 }
 
 .hover-card:hover {
@@ -79,6 +80,6 @@
   background-color: #21bff9; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   transform: translateY(-5px);
-  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  transition-property: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
