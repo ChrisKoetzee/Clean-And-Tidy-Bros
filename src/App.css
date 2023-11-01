@@ -8,9 +8,29 @@
 
 }
 
-.navB .nav-link {
+.navB .nav-link {     
   color: blue; 
 }
+
+.navbar-toggler {
+  color: blue; /* Adjust the color of the burger menu button */
+  background-color: transparent; /* Set the background color to transparent */
+}
+
+/* Add styles for the navbar-toggler-icon */
+.navbar-toggler-icon {
+  background-color: blue; /* Set the background color of the icon */
+  border-radius: 40%;
+}
+
+/* .navbar-toggler-icon::before {
+  content: "";
+  display: block;
+  width: 20px; 
+  height: 2px;
+  background-color: blue;
+  margin: 2px 0; 
+} */
 
 .App {
   text-align: center;
@@ -83,3 +103,33 @@
   transition-property: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
+/* Custom CSS for Carousel Arrows */
+.carousel-control-prev, .carousel-control-next {
+  align-items: center;
+  background-color: #61dafb; 
+  color: #61dafb; 
+  border: none; 
+  border-radius: 50%; 
+  opacity: 0.8; 
+  width: 40px; 
+  height: 40px; 
+  transition: opacity 0.2s;
+  position: absolute;
+  top: 50%; 
+  transform: translateY(-50%); 
+  z-index: 1; 
+}
+
+.carousel-control-prev {
+  left: 0; /* Position the left arrow on the left side */
+}
+
+.carousel-control-next {
+  right: 0; /* Position the right arrow on the right side */
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+  background-color: blue;
+  color: blue; 
+  opacity: 1; 
+}
