@@ -1,3 +1,4 @@
+import React from 'react';
 import { Col, Row, Container, Form, Button } from "react-bootstrap";
 import Template from "../components/Template";
 import '../App.css';
