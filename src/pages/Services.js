@@ -1,3 +1,4 @@
+import React from 'react';
 import { Col, Row, Container, Table } from "react-bootstrap";
 import Template from "../components/Template";
 import '../App.css';
