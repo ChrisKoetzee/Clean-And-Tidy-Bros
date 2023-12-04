@@ -11,7 +11,7 @@ const Home = () => {
     <Template>
       <div className="App mt-5">
         <header className="App-header mt-5">
-          <img src={logo} className="App-logo mt-5" m={5} p={5} alt="logo" />
+          <img src={logo} className="App-logo mt-5" alt="logo" />
           <p>
             Please see the link below for the flyer.
           </p>

@@ -1,7 +1,8 @@
-import { Col, Row, Container, Card, Button } from "react-bootstrap";
+import React from 'react';
+import { Col, Row, Container, Card } from "react-bootstrap";
 import Template from "../components/Template";
 import '../App.css';
-import TestimonialModal from "../components/TestimonialModal";
+import ModalTestimonial from "../components/ModalTestimonial";
 
 const Testimonials = () => {
     return (
@@ -9,15 +10,7 @@ const Testimonials = () => {
             <header className="App-header mt-5">
                 <Container fluid="md" className="mt-5">
                     <h1>Testimonials</h1>
-                    <Button 
-                        type="button" 
-                        className="btn btn-primary" 
-                        data-bs-toggle="modal" 
-                        data-bs-target="#myModal"
-                        >
-                        Add your testimonial
-                        </Button>
-                        <TestimonialModal />
+                    <ModalTestimonial />
                     <Row>
                         <Col xs={12} sm={6} md={4} className="p-3">
                             <Card className="hover-card">
