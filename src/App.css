@@ -121,11 +121,11 @@
 }
 
 .carousel-control-prev {
-  left: 0; /* Position the left arrow on the left side */
+  left: 0; 
 }
 
 .carousel-control-next {
-  right: 0; /* Position the right arrow on the right side */
+  right: 0; 
 }
 
 .carousel-control-prev:hover, .carousel-control-next:hover {
