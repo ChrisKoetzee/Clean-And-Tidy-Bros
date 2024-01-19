@@ -69,14 +69,14 @@
   color: blue;
 }
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 .text-left-align {
   text-align: left;
@@ -84,7 +84,7 @@
 
 .small-text {
   font-size: 1rem;
-  text-decoration-thickness: 3rem;
+  text-decoration: 3rem;
 }
 
 .hover-card {
