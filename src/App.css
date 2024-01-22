@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000; /* You can adjust the z-index as needed */
+  z-index: 1000; 
   background-color: #61dafb;
 
 }
@@ -13,24 +13,14 @@
 }
 
 .navbar-toggler {
-  color: blue; /* Adjust the color of the burger menu button */
-  background-color: transparent; /* Set the background color to transparent */
+  color: blue; 
+  background-color: transparent; 
 }
 
-/* Add styles for the navbar-toggler-icon */
 .navbar-toggler-icon {
-  background-color: blue; /* Set the background color of the icon */
+  background-color: blue;
   border-radius: 40%;
 }
-
-/* .navbar-toggler-icon::before {
-  content: "";
-  display: block;
-  width: 20px; 
-  height: 2px;
-  background-color: blue;
-  margin: 2px 0; 
-} */
 
 .App {
   text-align: center;
@@ -44,17 +34,11 @@
   transition: transform 0.3s ease;
 }
 
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
-
 .App-header {
   background-image: url('https://media.istockphoto.com/id/1279811110/photo/chemical-sofa-depth-cleaning-by-a-professional.webp?b=1&s=170667a&w=0&k=20&c=jkVjBbeIeHrbCxHNKUjLPq6Rq7WCgwbtzE5Mp-XOD6U=');
   background-size: cover;
   background-position: center;
-  background-color: rgba(255, 255, 255, 0.6); /* White color with 60% opacity */
+  background-color: rgba(255, 255, 255, 0.6);
   background-blend-mode: overlay;
   min-height: 100vh;
   display: flex;
@@ -68,15 +52,6 @@
 .App-link {
   color: blue;
 }
-
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
 
 .text-left-align {
   text-align: left;
@@ -103,7 +78,6 @@
   transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
-/* Custom CSS for Carousel Arrows */
 .carousel-control-prev, .carousel-control-next {
   align-items: center;
   background-color: #61dafb; 
