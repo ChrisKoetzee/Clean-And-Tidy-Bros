@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   MDBBtn,
   MDBModal,
@@ -11,7 +11,7 @@ import {
   MDBInput,
   MDBCol,
   MDBRow,
-} from 'mdb-react-ui-kit';
+} from "mdb-react-ui-kit";
 
 const ModalContact = () => {
   const [form, setForm] = useState(false);
@@ -22,7 +22,7 @@ const ModalContact = () => {
     <div>
       <MDBBtn onClick={toggle}>Contact Us</MDBBtn>
 
-      <MDBModal tabIndex='-1' show={form} setShow={setForm}>
+      <MDBModal tabIndex="-1" show={form} setShow={setForm}>
         <MDBModalDialog centered>
           <MDBModalContent>
             <MDBModalHeader>
@@ -30,30 +30,50 @@ const ModalContact = () => {
             </MDBModalHeader>
             <MDBModalBody>
               <form>
-                <MDBRow className='mb-4'>
+                <MDBRow className="mb-4">
                   <MDBCol>
-                    <MDBInput className='mb-4' type='text' id='Name' label='Name' />
+                    <MDBInput
+                      className="mb-4"
+                      type="text"
+                      id="Name"
+                      label="Name"
+                    />
                   </MDBCol>
                   <MDBCol>
-                    <MDBInput className='mb-4' type='text' id='Surname' label='Surname' />
+                    <MDBInput
+                      className="mb-4"
+                      type="text"
+                      id="Surname"
+                      label="Surname"
+                    />
                   </MDBCol>
                 </MDBRow>
-                <MDBInput wrapperClass='mb-4' type='tel' id='number' label='Phone number' />
-                <MDBInput className='mb-4' type='email' id='email' label='Email address' />
-                <MDBInput 
-                    wrapperClass='mb-4' 
-                    id='textarea' 
-                    rows={4} 
-                    label='Message' 
-                    style={{
-                        'minHeight': '100px',
-                        'resize': 'vertical'
-                    }}
+                <MDBInput
+                  wrapperClass="mb-4"
+                  type="tel"
+                  id="number"
+                  label="Phone number"
+                />
+                <MDBInput
+                  className="mb-4"
+                  type="email"
+                  id="email"
+                  label="Email address"
+                />
+                <MDBInput
+                  wrapperClass="mb-4"
+                  id="textarea"
+                  rows={4}
+                  label="Message"
+                  style={{
+                    minHeight: "100px",
+                    resize: "vertical",
+                  }}
                 />
               </form>
             </MDBModalBody>
             <MDBModalFooter>
-              <MDBBtn color='primary' onClick={toggle}>
+              <MDBBtn color="primary" onClick={toggle}>
                 Submit
               </MDBBtn>
             </MDBModalFooter>
