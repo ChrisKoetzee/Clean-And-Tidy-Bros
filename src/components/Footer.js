@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   MDBFooter,
   MDBContainer,
@@ -6,45 +6,55 @@ import {
   MDBBtn,
   MDBRow,
   MDBCol,
-} from 'mdb-react-ui-kit';
-import ModalContact from './ModalContact';
+} from "mdb-react-ui-kit";
+import ModalContact from "./ModalContact";
 
-const Footer =() => {
+const Footer = () => {
   return (
-    <MDBFooter className='text-center text-navy' style={{ backgroundColor: '#61dafb' }}>
-      <MDBContainer className='p-4 pb-0'>
-        <section className='mb-4'>
-        <h4><strong>Contact Us</strong></h4>
+    <MDBFooter
+      className="text-center text-navy"
+      style={{ backgroundColor: "#61dafb" }}
+    >
+      <MDBContainer className="p-4 pb-0">
+        <section className="mb-4">
+          <h4>
+            <strong>Contact Us</strong>
+          </h4>
           <MDBRow>
             <MDBCol xs={12} sm={6}>
-            <p><strong>Get connected with us on social networks : </strong></p>
-              <div style={{ display: 'flex' }} className='justify-content-center'>
+              <p>
+                <strong>Get connected with us on social networks : </strong>
+              </p>
+              <div
+                style={{ display: "flex" }}
+                className="justify-content-center"
+              >
                 <MDBBtn
                   floating
-                  className='m-1 d-flex justify-content-center align-items-center'
-                  style={{ backgroundColor: '#3b5998'}}
-                  href='https://www.facebook.com/profile.php?id=100095054632468&mibextid=LQQJ4d'
-                  role='button'
+                  className="m-1 d-flex justify-content-center align-items-center"
+                  style={{ backgroundColor: "#3b5998" }}
+                  href="https://www.facebook.com/profile.php?id=100095054632468&mibextid=LQQJ4d"
+                  role="button"
                 >
-                  <MDBIcon fab icon='facebook-f'/>
+                  <MDBIcon fab icon="facebook-f" />
                 </MDBBtn>
                 <MDBBtn
                   floating
-                  className='m-1 d-flex justify-content-center align-items-center'
-                  style={{ backgroundColor: '#55acee' }}
-                  href='https://twitter.com/bros_tidy'
-                  role='button'
+                  className="m-1 d-flex justify-content-center align-items-center"
+                  style={{ backgroundColor: "#55acee" }}
+                  href="https://twitter.com/bros_tidy"
+                  role="button"
                 >
-                  <MDBIcon fab icon='twitter' />
+                  <MDBIcon fab icon="twitter" />
                 </MDBBtn>
                 <MDBBtn
                   floating
-                  className='m-1 d-flex justify-content-center align-items-center'
-                  style={{ backgroundColor: '#ac2bac' }}
-                  href='https://instagram.com/clean_and_tidy_bros_pty?igshid=MWZjMTM2ODFkZg=='
-                  role='button'
+                  className="m-1 d-flex justify-content-center align-items-center"
+                  style={{ backgroundColor: "#ac2bac" }}
+                  href="https://instagram.com/clean_and_tidy_bros_pty?igshid=MWZjMTM2ODFkZg=="
+                  role="button"
                 >
-                  <MDBIcon fab icon='instagram' />
+                  <MDBIcon fab icon="instagram" />
                 </MDBBtn>
               </div>
             </MDBCol>
@@ -63,14 +73,17 @@ const Footer =() => {
         </section>
       </MDBContainer>
 
-      <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+      <div
+        className="text-center p-3"
+        style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+      >
         © 2023 Copyright :
-        <a className='text-black' href='https://lustrous-shortbread-942556.netlify.app/'>
+        <a className="text-black" href="#/">
           - Created by TnT Development
         </a>
       </div>
     </MDBFooter>
   );
-}
+};
 
 export default Footer;
