@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../images/CATB-LogoNew.jpg";
+import logo from "../images/Umfazi C&T.jpg";
 import "../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import VisionMission from "../components/VisionMission";
@@ -18,7 +18,7 @@ const Home = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Clean and Tidy Bros Flyer
+            Umfazi Clean and Tidy Flyer
           </a>
           <VisionMission />
         </header>

@@ -8,7 +8,7 @@ const NavBar = () => {
   return (
     <Navbar expand="lg" className="fixed-top navB mb-5 container-fluid">
       <Navbar.Brand as={Link} to="/" className="ms-auto px-3">
-        Clean and Tidy Bros
+        Umfazi Clean and Tidy
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">

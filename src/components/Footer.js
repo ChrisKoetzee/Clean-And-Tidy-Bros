@@ -65,7 +65,7 @@ const Footer = () => {
               </p>
               <p>
                 <MDBIcon icon="phone" className="me-3" />
-                Contact Eathan on +27749634583 or Contact Kariem on +27742170023
+                Contact Eathan on +27749634583, Kariem on +27742170023<br/> or Angelique on +27638130115
               </p>
               <ModalContact />
             </MDBCol>
