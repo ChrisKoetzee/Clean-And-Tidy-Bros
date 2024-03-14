@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <MDBFooter
       className="text-center text-navy"
-      style={{ backgroundColor: "#61dafb" }}
+      style={{ backgroundColor: "#61dafb", marginTop: 0 }}
     >
       <MDBContainer className="p-4 pb-0">
         <section className="mb-4">
@@ -75,9 +75,9 @@ const Footer = () => {
 
       <div
         className="text-center p-3"
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+        style={{ backgroundColor: "rgba(0, 0, 0, 0.2)", marginBottom: 0 }}
       >
-        © 2023 Copyright :
+        © 2024 Copyright :
         <a className="text-black" href="#/">
           - Created by TnT Development
         </a>

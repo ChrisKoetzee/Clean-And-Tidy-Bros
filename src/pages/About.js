@@ -2,43 +2,30 @@ import React from "react";
 import { Container, Col, Row } from "react-bootstrap";
 import Template from "../components/Template";
 import "../App.css";
+import school from "../images/school.jpg";
 
 const About = () => {
   return (
     <div>
       <Template>
-        <header className="App-header mt-5">
-          <Container fluid="md" className="mt-5">
+        <header className="App-header mt-5 mb-0">
+          <Container fluid="md" className="mt-5 mb-0 pb-0">
             <Row className="display-flex justify-content-center">
               <Col xs={12} sm={12}>
                 <h1>About Us</h1>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                  Two high school friends got together on one rainy day grabbed a note book some coffee and sat in their car parked in the garage and decided. HOW CAN WE MAKE A DIFFERENCE WITHIN OUR COMMUNITY!!. With mothers and fathers both working in the household and young children left to clean instead of focusing on their schooling as the 2 friends themselves had to do. They decided to help.
                 </p>
               </Col>
             </Row>
-            <Row>
-              <Col xs={12} sm={6}>
+            <Row className="mt-0 mb-0">
+              <Col xs={12} sm={12} className="mt-0 mb-0">
                 <img
-                  src="https://digitalcollections.lib.uct.ac.za/islandora/object/islandora%3A18114/datastream/MEDIUM_SIZE/view"
-                  height="80%"
-                  width="100%"
-                  alt="flats in Elsies River"
-                />
-              </Col>
-              <Col xs={12} sm={6}>
-                <img
-                  src="https://digitalcollections.lib.uct.ac.za/islandora/object/islandora%3A18113/datastream/MEDIUM_SIZE/view"
-                  height="80%"
-                  width="100%"
-                  alt="Elsies Main road 1977"
+                  src={school}
+                  height="55%"
+                  width="70%"
+                  alt="Goodwood college"
+                  style={{marginBottom:0}}
                 />
               </Col>
             </Row>
