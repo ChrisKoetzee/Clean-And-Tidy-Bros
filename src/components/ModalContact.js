@@ -64,7 +64,7 @@ const ModalContact = () => {
           setFormData({
             user_name: "",
             user_email: "",
-            user_message: ""
+            user_message: ""  
           });
           toggle();
         },
