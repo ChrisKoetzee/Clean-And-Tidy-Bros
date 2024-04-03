@@ -8,6 +8,8 @@ import {
   MDBCol,
 } from "mdb-react-ui-kit";
 import ModalContact from "./ModalContact";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Footer = () => {
   return (
@@ -54,6 +56,7 @@ const Footer = () => {
                   href="https://instagram.com/clean_and_tidy_bros_pty?igshid=MWZjMTM2ODFkZg=="
                   role="button"
                 >
+                <ToastContainer />
                   <MDBIcon fab icon="instagram" />
                 </MDBBtn>
               </div>

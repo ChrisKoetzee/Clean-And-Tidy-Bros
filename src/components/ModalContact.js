@@ -11,6 +11,8 @@ import {
   MDBInput,
 } from "mdb-react-ui-kit";
 import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -27,6 +29,10 @@ const ModalContact = () => {
 
   const toggle = () => setForm(!form);
 
+  const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+  const userId = process.env.REACT_APP_EMAILJS_USER_ID;
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -38,20 +44,23 @@ const ModalContact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    if (!formData.user_email) {
-      console.log("Email address is required.");
+    if (!formData.user_name || !formData.user_email || !formData.user_message) {
+      console.log("Please complete all fields");
       return;
     }
     
     console.log("Sending email...");
+    const sendingToastId = toast.info("Sending email...", { autoClose: 2000 });
   
     emailjs
-      .sendForm('service_5kxb4hc', 'template_5mx6s6t', Form.current, {
-        publicKey: 'fGwhF0VBFnRcFWDtb',
+      .sendForm(serviceId, templateId, Form.current, {
+        publicKey: userId,
       })
       .then(
         () => {
           console.log('SUCCESS!');
+          toast.success('Email sent successfully!', { autoClose: 2000 });
+          toast.dismiss(sendingToastId);
           setFormData({
             user_name: "",
             user_email: "",
@@ -61,6 +70,7 @@ const ModalContact = () => {
         },
         (error) => {
           console.log('FAILED...', error.text);
+          toast.error('Failed to send email.');
         },
       );
   };
