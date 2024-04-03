@@ -4,10 +4,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Gallery from "./pages/Gallery";
 import Services from "./pages/Services";
 import GetAQuote from "./pages/GetAQuote";
-import Testimonials from "./pages/Testimonials";
+// import Gallery from "./pages/Gallery";
+// import Testimonials from "./pages/Testimonials";
 
 function App() {
   return (
@@ -15,10 +15,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/gallery" element={<Gallery />} />
+        {/* <Route path="/gallery" element={<Gallery />} /> */}
         <Route path="/services" element={<Services />} />
         <Route path="/getAQuote" element={<GetAQuote />} />
-        <Route path="/testimonials" element={<Testimonials />} />
+        {/* <Route path="/testimonials" element={<Testimonials />} /> */}
       </Routes>
     </div>
   );
