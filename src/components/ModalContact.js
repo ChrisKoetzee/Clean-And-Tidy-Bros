@@ -18,7 +18,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const ModalContact = () => {
-  const [form, setForm] = useState(false);
+  const [formOpen, setFormOpen] = useState(false);
   const [formData, setFormData] = useState({
     user_name: "",
     user_email: "",
@@ -27,10 +27,10 @@ const ModalContact = () => {
 
   const Form = useRef();
 
-  const toggle = () => setForm(!form);
+  const toggleModal = () => setFormOpen(!formOpen);
 
-  const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-  const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+  const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_CONTACT_ID;
+  const contactId = process.env.REACT_APP_EMAILJS_TEMPLATE_CONTACT_ID;
   const userId = process.env.REACT_APP_EMAILJS_USER_ID;
 
   const handleInputChange = (e) => {
@@ -46,27 +46,26 @@ const ModalContact = () => {
 
     if (!formData.user_name || !formData.user_email || !formData.user_message) {
       console.log("Please complete all fields");
+      toast.info("Please complete all fields");
       return;
     }
     
     console.log("Sending email...");
-    const sendingToastId = toast.info("Sending email...", { autoClose: 2000 });
-  
+
     emailjs
-      .sendForm(serviceId, templateId, Form.current, {
+      .sendForm(serviceId, contactId, Form.current, {
         publicKey: userId,
       })
       .then(
         () => {
           console.log('SUCCESS!');
           toast.success('Email sent successfully!', { autoClose: 2000 });
-          toast.dismiss(sendingToastId);
           setFormData({
             user_name: "",
             user_email: "",
-            user_message: ""
+            user_message: ""  
           });
-          toggle();
+          toggleModal();
         },
         (error) => {
           console.log('FAILED...', error.text);
@@ -83,8 +82,8 @@ const ModalContact = () => {
 
   return (
     <div>
-      <MDBBtn onClick={toggle}>Contact Us</MDBBtn>
-      <MDBModal tabIndex="-1" show={form} setShow={setForm}>
+      <MDBBtn onClick={toggleModal}>Contact Us</MDBBtn>
+      <MDBModal tabIndex="-1" show={formOpen} setShow={setFormOpen}>
         <MDBModalDialog centered>
           <MDBModalContent>
             <MDBModalHeader>

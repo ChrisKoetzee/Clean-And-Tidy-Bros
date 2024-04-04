@@ -19,18 +19,18 @@ const NavBar = () => {
           <Nav.Link as={Link} to="/about">
             About
           </Nav.Link>
-          <Nav.Link as={Link} to="/gallery">
+          {/* <Nav.Link as={Link} to="/gallery">
             Gallery
-          </Nav.Link>
+          </Nav.Link> */}
           <Nav.Link as={Link} to="/services">
             Services
           </Nav.Link>
           <Nav.Link as={Link} to="/getAQuote">
             Get a free quote
           </Nav.Link>
-          <Nav.Link as={Link} to="/testimonials">
+          {/* <Nav.Link as={Link} to="/testimonials">
             Testimonials
-          </Nav.Link>
+          </Nav.Link> */}
         </Nav>
       </Navbar.Collapse>
       <ModalContact />

@@ -56,7 +56,6 @@ const Footer = () => {
                   href="https://instagram.com/clean_and_tidy_bros_pty?igshid=MWZjMTM2ODFkZg=="
                   role="button"
                 >
-                <ToastContainer />
                   <MDBIcon fab icon="instagram" />
                 </MDBBtn>
               </div>
@@ -71,6 +70,7 @@ const Footer = () => {
                 Contact Eathan on +27749634583, Kariem on +27742170023<br/> or Angelique on +27638130115
               </p>
               <ModalContact />
+              <ToastContainer />
             </MDBCol>
           </MDBRow>
         </section>
