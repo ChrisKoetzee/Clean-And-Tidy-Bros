@@ -6,12 +6,14 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import GetAQuote from "./pages/GetAQuote";
+import { ToastContainer } from 'react-toastify';
 // import Gallery from "./pages/Gallery";
 // import Testimonials from "./pages/Testimonials";
 
 function App() {
   return (
     <div className="App">
+    <ToastContainer/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

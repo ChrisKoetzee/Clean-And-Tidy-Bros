@@ -7,7 +7,6 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const GetAQuote = () => {
-  const [ form, setForm] = useState(false);
   const [ formData, setFormData ] = useState({
     userName: "",
     userEmail: "",
@@ -15,12 +14,10 @@ const GetAQuote = () => {
     userDescription: ""
   });
 
-  const Form = useRef();
+  const quote = useRef();
 
-  const toggle = () => setForm(!form);
-
-  const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-  const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+  const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_QUOTE_ID;
+  const quoteId = process.env.REACT_APP_EMAILJS_TEMPLATE_QUOTE_ID;
   const userId = process.env.REACT_APP_EMAILJS_USER_ID;
 
   const handleChange = (e) =>{
@@ -36,27 +33,25 @@ const GetAQuote = () => {
 
     if (!formData.userName || !formData.userEmail || !formData.userService || !formData.userDescription){
       console.log("Please complete all fields");
+      toast.info("Please complete all fields");
       return;
     };
-    console.log("Sending email");
-    const sendingToastId = toast.info("Sending Email", {autoClose: 2000});
+    console.log("Sending request");
 
     emailjs 
-      .sendForm( serviceId, templateId, Form.current, {
+      .sendForm( serviceId, quoteId, quote.current, {
         publicKey: userId,
       })
       .then(
         () => {
           console.log("Success");
           toast.success("Request sent successfully", {autoClose: 2000});
-          toast.dismiss(sendingToastId);
           setFormData ({
             userName: "",
             userEmail: "",
             userService: "",
             userDescription: "",
           });
-          toggle();
         },
         (error) => {
           console.log('Failed to send request');
@@ -74,7 +69,7 @@ const GetAQuote = () => {
     <Template>
       <header className="App-header mt-5">
         <Container fluid="md" className="mt-5 centered-container">
-          <Form ref={Form} onSubmit={submitForm}>
+          <Form ref={quote} onSubmit={submitForm}>
             <h1>Get a Quote</h1>
             <Row className="justify-content-center">
               <Col xs={12} sm={6}>
@@ -84,6 +79,7 @@ const GetAQuote = () => {
                     type="text"
                     name="userName"
                     placeholder="Enter name and surname"
+                    value={formData.userName}
                     onChange={handleChange}
                   />
                 </Form.Group>
@@ -97,6 +93,7 @@ const GetAQuote = () => {
                     type="email"
                     name="userEmail"
                     placeholder="Enter email address"
+                    value={formData.userEmail}
                     onChange={handleChange}
                   />
                 </Form.Group>
@@ -106,7 +103,7 @@ const GetAQuote = () => {
               <Col xs={12} sm={6}>
                 <Form.Group className="mb-3" controlId="service">
                   <Form.Label>Select a service</Form.Label>
-                  <Form.Select name="userService" defaultValue="" onChange={handleChange}>
+                  <Form.Select name="userService" value={formData.userService} onChange={handleChange}>
                     <option value="" disabled>
                       Select a service
                     </option>
@@ -127,6 +124,7 @@ const GetAQuote = () => {
                     rows={3}
                     name="userDescription"
                     placeholder="Please enter a brief descrioption"
+                    value={formData.userDescription}
                     onChange={handleChange}
                   />
                 </Form.Group>
@@ -134,7 +132,8 @@ const GetAQuote = () => {
             </Row>
             <Row className="justify-content-center">
               <Col xs={12} sm={6}>
-                <Button className="w-100" onClick={toggle}>Submit</Button>
+                <Button className="w-100" type="submit" >Submit</Button>
+                
               </Col>
             </Row>
           </Form>
