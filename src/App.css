@@ -5,6 +5,7 @@
   right: 0;
   z-index: 1000;
   background-color: #61dafb;
+  margin-bottom: 1px;
 }
 
 .navB .nav-link {
@@ -39,13 +40,21 @@
   background-position: center;
   background-color: rgba(255, 255, 255, 0.6);
   background-blend-mode: overlay;
-  min-height: 100vh;
+  min-height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;  
   font-size: calc(10px + 2vmin);
   color: rgb(8, 8, 118);
+}
+
+.service-container {
+  width: 50%;
+}
+
+.Table {
+  font-size: 30px;
 }
 
 .App-link {
@@ -62,7 +71,9 @@
 }
 
 .hover-card {
-  opacity: 0.5;
+  font-size: large;
+  font-weight: 500;
+  opacity: 2.8;
   background-color: #f5f9fa;
   box-shadow: none;
   transform: translateY(0);
@@ -74,7 +85,6 @@
 }
 
 .hover-card:hover {
-  opacity: 0.5;
   background-color: #21bff9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
@@ -114,4 +124,8 @@
   background-color: blue;
   color: blue;
   opacity: 1;
+}
+
+footer {
+  margin-top: 0px;
 }
