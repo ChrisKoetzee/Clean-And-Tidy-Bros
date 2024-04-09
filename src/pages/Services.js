@@ -7,7 +7,7 @@ const Services = () => {
   return (
     <Template>
       <header className="App-header mt-5">
-        <Container fluid="md" className="mt-5">
+        <Container fluid="md" className="service-container mt-5">
           <h1>Services</h1>
           <Row>
             <Col>

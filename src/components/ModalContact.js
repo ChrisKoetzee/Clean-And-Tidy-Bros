@@ -14,9 +14,6 @@ import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
-
-
 const ModalContact = () => {
   const [formOpen, setFormOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -78,7 +75,6 @@ const ModalContact = () => {
     e.preventDefault();
     sendEmail(e);
   };
- 
 
   return (
     <div>
