@@ -18,22 +18,25 @@ const NavBar = () => {
           </Nav.Link>
           <Nav.Link as={Link} to="/about">
             About
-          </Nav.Link>
-          {/* <Nav.Link as={Link} to="/gallery">
-            Gallery
-          </Nav.Link> */}
+          </Nav.Link>       
           <Nav.Link as={Link} to="/services">
             Services
           </Nav.Link>
           <Nav.Link as={Link} to="/getAQuote">
             Get a free quote
           </Nav.Link>
+            {/* <Nav.Link as={Link} to="/gallery">
+            Gallery
+          </Nav.Link> */}
           {/* <Nav.Link as={Link} to="/testimonials">
             Testimonials
           </Nav.Link> */}
         </Nav>
       </Navbar.Collapse>
-      <ModalContact />
+      <div classname="navContact" style={{marginRight: "20px"}}>
+        <ModalContact />
+      </div>
+      
     </Navbar>
   );
 };
