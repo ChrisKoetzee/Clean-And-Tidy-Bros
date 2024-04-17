@@ -8,8 +8,8 @@ const About = () => {
   return (
     <div>
       <Template>
-        <header className="App-header mt-5 mb-0">
-          <Container fluid="md" className="mt-5 mb-0 pb-0">
+        <header className="App-header mt-5 mb-10" >
+          <Container fluid="md" className="mt-5" >
             <Row className="display-flex justify-content-center">
               <Col xs={12} sm={12}>
                 <h1>About Us</h1>
@@ -18,14 +18,14 @@ const About = () => {
                 </p>
               </Col>
             </Row>
-            <Row className="mt-0 mb-0">
-              <Col xs={12} sm={12} className="mt-0 mb-0">
+            <Row className="aboutImage mt-0" >
+              <Col xs={12} sm={12} className="mt-0">
                 <img
                   src={school}
-                  height="55%"
-                  width="70%"
+                  className="img-fluid"
+                  // height="50%"
+                  // width="70%"
                   alt="Goodwood college"
-                  style={{marginBottom:0}}
                 />
               </Col>
             </Row>
