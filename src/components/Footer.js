@@ -40,7 +40,7 @@ const Footer = () => {
                 >
                   <MDBIcon fab icon="facebook-f" />
                 </MDBBtn>
-                <MDBBtn
+                {/* <MDBBtn
                   floating
                   className="m-1 d-flex justify-content-center align-items-center"
                   style={{ backgroundColor: "#55acee" }}
@@ -48,12 +48,12 @@ const Footer = () => {
                   role="button"
                 >
                   <MDBIcon fab icon="twitter" />
-                </MDBBtn>
+                </MDBBtn> */}
                 <MDBBtn
                   floating
                   className="m-1 d-flex justify-content-center align-items-center"
                   style={{ backgroundColor: "#ac2bac" }}
-                  href="https://instagram.com/clean_and_tidy_bros_pty?igshid=MWZjMTM2ODFkZg=="
+                  href="https://www.instagram.com/umfazi_clean_and_tidy_rsa?igsh=OG0yeTQ2M2lyc2tn&utm_source=qr"
                   role="button"
                 >
                   <MDBIcon fab icon="instagram" />
@@ -80,7 +80,7 @@ const Footer = () => {
         className="text-center p-3"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.2)", marginBottom: 0 }}
       >
-        © 2024 Copyright :
+        © {new Date().getFullYear()}  Copyright :
         <a className="text-black" href="#/">
           - Created by TnT Development
         </a>
